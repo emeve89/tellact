@@ -7,6 +7,7 @@ gem 'sqlite3'
 gem 'active_model_serializers', '~> 0.8.3'
 gem 'devise', '~> 3.4.1'
 gem 'thin'
+gem 'rack-cors', require: 'rack/cors'
 
 group :development, :test do
   gem 'faker'
