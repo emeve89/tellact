@@ -1,3 +1,5 @@
 en:
   session_controller:
     invalid_login_attempt: 'Invalid email or password'
+  user_controller:
+    user_create_error: 'Invalid params'
