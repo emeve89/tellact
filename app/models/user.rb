@@ -1,6 +1,8 @@
 class User < ActiveRecord::Base
   devise :database_authenticatable, :recoverable, :validatable
 
+  has_many :stories
+
   after_save :ensure_authentication_token
 
   validates :username, :email, presence: true
