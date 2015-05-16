@@ -4,7 +4,7 @@ module V1
 
     def create
       user = User.find_for_database_authentication(username: params[:username])
-      if user.valid_password?(params[:password])
+      if user.valid_password?(params[:password]) or raise
         sign_in :user, user
         render json: user, serializer: SessionSerializer, root: nil
       end
